@@ -5,43 +5,43 @@
  * found at http://liferay.github.io/lexicon/content/buttons/
  *
  * @param? block
- * @param? cssClass
+ * @param? elementClasses
  * @param? href
  * @param? level
  * @param? size
  * @param? value
  */
 {template .render}
-	{let $buttonCssClass kind="text"}
-		btn btn-{$level ?: 'default'}{$block ? ' btn-block' : ''}{$size ? ' btn-' + $size : ''}{$cssClass ? ' ' + $cssClass : ''}
+	{let $buttonElementClasses kind="text"}
+		btn btn-{$level ?: 'default'}{$block ? ' btn-block' : ''}{$size ? ' btn-' + $size : ''}{$elementClasses ? ' ' + $elementClasses : ''}
 	{/let}
 
 	{if isNonnull($value)}
 		{call .input data="all"}
-			{param cssClass: $buttonCssClass /}
+			{param elementClasses: $buttonElementClasses /}
 		{/call}
 	{elseif isNonnull($href)}
 		{call .link data="all"}
-			{param cssClass: $buttonCssClass /}
+			{param elementClasses: $buttonElementClasses /}
 		{/call}
 	{else}
 		{call .button data="all"}
-			{param cssClass: $buttonCssClass /}
+			{param elementClasses: $buttonElementClasses /}
 		{/call}
 	{/if}
 {/template}
 
 /**
- * @param? cssClass
+ * @param? elementClasses
  * @param? icon
  * @param? label
  */
 {template .button}
-	<button class="{$cssClass}" type="button">
+	<button class="{$elementClasses}" type="button">
 		{if isNonnull($icon)}
 			<span class="icon-monospaced">
 				{call LexiconIcon.render data="all"}
-					{param cssClass: '' /}
+					{param elementClasses: '' /}
 					{param symbol: $icon /}
 				{/call}
 			</span>
@@ -54,18 +54,18 @@
 {/template}
 
 /**
- * @param cssClass
+ * @param elementClasses
  * @param value
  */
 {template .input}
-	<input class="{$cssClass}" type="submit" value="{$value}" />
+	<input class="{$elementClasses}" type="submit" value="{$value}" />
 {/template}
 
 /**
- * @param cssClass
+ * @param elementClasses
  * @param href
  * @param label
  */
 {template .link}
-	<a class="{$cssClass}" href="{$href}">{$label}</a>
+	<a class="{$elementClasses}" href="{$href}">{$label}</a>
 {/template}

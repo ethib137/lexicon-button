@@ -33,17 +33,6 @@ LexiconButton.STATE = {
 	},
 
 	/**
-	 * CSS class (or list of classes) for styling the button's element
-	 * @default undefined
-	 * @instance
-	 * @memberof LexiconButton
-	 * @type {string}
-	 */
-	cssClass: {
-		validator: core.isString
-	},
-
-	/**
 	 * URI of the button. Setting `href` will make the component render an anchor
 	 * instead of a button but still look like one
 	 * @default undefined

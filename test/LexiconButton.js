@@ -19,12 +19,12 @@ describe('LexiconButton', () => {
 		assert.strictEqual(lexiconButton.element.outerHTML, __html__['test/fixture/testBlockLexiconButton.html']);
 	});
 
-	it('should append the provided css class to the button markup', () => {
+	it('should append the provided element class to the button markup', () => {
 		lexiconButton = new LexiconButton({
-			cssClass: 'css-class'
+			elementClasses: 'css-class'
 		});
 
-		assert.strictEqual(lexiconButton.element.outerHTML, __html__['test/fixture/testCssClassLexiconButton.html']);
+		assert.strictEqual(lexiconButton.element.outerHTML, __html__['test/fixture/testElementClassesLexiconButton.html']);
 	});
 
 	it('should generate the default button markup when no params are provided', () => {
