@@ -35,38 +35,27 @@
 		<script type="text/javascript">
 			var spritemap = '../node_modules/lexicon-ux/build/images/icons/icons.svg';
 			var levels = ['default', 'primary', 'info', 'success', 'warning', 'danger', 'link'];
+			var sizes = ['xs', 'sm', 'lg'];
 
 			// Default
 			new metal.LexiconButton({ label: 'Button' }, '#default');
 
 			// Levels
-			levels.forEach(function(level, index) {
+			levels.forEach(function(level) {
 				new metal.LexiconButton({
-					value: 'Button ' + index,
+					value: level,
 					label: level,
-					level: level,
-					spritemap: spritemap
+					level: level
 				}, '#levels');
 			});
 
 			// Sizes
-			new metal.LexiconButton({
-				label: 'xs',
-				size: 'xs',
-				spritemap: spritemap
-			}, '#sizes');
-
-			new metal.LexiconButton({
-				label: 'sm',
-				size: 'sm',
-				spritemap: spritemap
-			}, '#sizes');
-
-			new metal.LexiconButton({
-				label: 'lg',
-				size: 'lg',
-				spritemap: spritemap
-			}, '#sizes');
+			sizes.forEach(function(size) {
+				new metal.LexiconButton({
+					label: size,
+					size: size
+				}, '#sizes');
+			});
 
 			// Icons
 			new metal.LexiconButton({
