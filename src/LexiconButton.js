@@ -58,14 +58,13 @@ LexiconButton.STATE = {
 
 	/**
 	 * Label of the button
-	 * @default ''
+	 * @default undefined
 	 * @instance
 	 * @memberof LexiconButton
 	 * @type {string}
 	 */
 	label: {
-		validator: core.isString,
-		value: ''
+		isHtml: true
 	},
 
 	/**

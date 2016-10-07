@@ -73,4 +73,12 @@ describe('LexiconButton', () => {
 
 		assert.strictEqual(lexiconButton.element.outerHTML, __html__['test/fixture/testSizeLexiconButton.html']);
 	});
+
+	it('should allow label to be html', () => {
+		lexiconButton = new LexiconButton({
+			label: '<span>Label</span>'
+		});
+
+		assert.strictEqual(lexiconButton.element.outerHTML, __html__['test/fixture/testLabelHtmlLexiconButton.html']);
+	});
 });
