@@ -35,7 +35,6 @@ LexiconButton.STATE = {
 	/**
 	 * URI of the button. Setting `href` will make the component render an
 	 * anchor instead of a button but still look like one.
-	 * @default undefined
 	 * @instance
 	 * @memberof LexiconButton
 	 * @type {string}
