@@ -16,7 +16,7 @@ describe('LexiconButton', () => {
 			block: true
 		});
 
-		assert.strictEqual(button.element.outerHTML, __html__['test/fixture/testBlockLexiconButton.html']);
+		assert.strictEqual(button.element.outerHTML, __html__['test/fixture/testBlockLexiconButton.html'].trim());
 	});
 
 	it('should append the provided element class to the button markup', () => {
@@ -24,13 +24,13 @@ describe('LexiconButton', () => {
 			elementClasses: 'css-class'
 		});
 
-		assert.strictEqual(button.element.outerHTML, __html__['test/fixture/testElementClassesLexiconButton.html']);
+		assert.strictEqual(button.element.outerHTML, __html__['test/fixture/testElementClassesLexiconButton.html'].trim());
 	});
 
 	it('should generate the default button markup when no params are provided', () => {
 		button = new LexiconButton();
 
-		assert.strictEqual(button.element.outerHTML, __html__['test/fixture/testDefaultLexiconButton.html']);
+		assert.strictEqual(button.element.outerHTML, __html__['test/fixture/testDefaultLexiconButton.html'].trim());
 	});
 
 	it('should render a link if the element contains an href', () => {
@@ -38,7 +38,7 @@ describe('LexiconButton', () => {
 			href: '#href'
 		});
 
-		assert.strictEqual(button.element.outerHTML, __html__['test/fixture/testHrefLexiconButton.html']);
+		assert.strictEqual(button.element.outerHTML, __html__['test/fixture/testHrefLexiconButton.html'].trim());
 	});
 
 	it('should render a lexicon icon inside the button using the provided spritemap and symbol', () => {
@@ -47,7 +47,7 @@ describe('LexiconButton', () => {
 			spritemap: 'spritemap'
 		});
 
-		assert.strictEqual(button.element.outerHTML, __html__['test/fixture/testIconLexiconButton.html']);
+		assert.strictEqual(button.element.outerHTML, __html__['test/fixture/testIconLexiconButton.html'].trim());
 	});
 
 	it('should use the provided label to generate the button markup', () => {
@@ -55,7 +55,7 @@ describe('LexiconButton', () => {
 			label: 'label'
 		});
 
-		assert.strictEqual(button.element.outerHTML, __html__['test/fixture/testLabelLexiconButton.html']);
+		assert.strictEqual(button.element.outerHTML, __html__['test/fixture/testLabelLexiconButton.html'].trim());
 	});
 
 	it('should use the provided level to generate the button markup', () => {
@@ -63,7 +63,7 @@ describe('LexiconButton', () => {
 			level: 'level'
 		});
 
-		assert.strictEqual(button.element.outerHTML, __html__['test/fixture/testLevelLexiconButton.html']);
+		assert.strictEqual(button.element.outerHTML, __html__['test/fixture/testLevelLexiconButton.html'].trim());
 	});
 
 	it('should use the provided size to generate the button markup', () => {
@@ -71,7 +71,7 @@ describe('LexiconButton', () => {
 			size: 'size'
 		});
 
-		assert.strictEqual(button.element.outerHTML, __html__['test/fixture/testSizeLexiconButton.html']);
+		assert.strictEqual(button.element.outerHTML, __html__['test/fixture/testSizeLexiconButton.html'].trim());
 	});
 
 	it('should allow label to be html', () => {
@@ -79,6 +79,6 @@ describe('LexiconButton', () => {
 			label: '<span>Label</span>'
 		});
 
-		assert.strictEqual(button.element.outerHTML, __html__['test/fixture/testLabelHtmlLexiconButton.html']);
+		assert.strictEqual(button.element.outerHTML, __html__['test/fixture/testLabelHtmlLexiconButton.html'].trim());
 	});
 });
