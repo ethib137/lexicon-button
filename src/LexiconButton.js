@@ -6,9 +6,9 @@ import templates from './LexiconButton.soy';
 import LexiconIcon from 'lexicon-icon'; // jshint ignore:line
 
 /**
- * Implementation of the Lexicon Button Piece
+ * Implementation of the Lexicon Button.
  *
- * @see  {@link http://liferay.github.io/lexicon/content/buttons/|Lexicon Definition}
+ * @see {@link http://liferay.github.io/lexicon/content/buttons/|Lexicon Definition}
  */
 class LexiconButton extends Component {
 }
@@ -21,7 +21,7 @@ class LexiconButton extends Component {
  */
 LexiconButton.STATE = {
 	/**
-	 * Makes the button a block element filling 100% of the available width
+	 * Makes the button a block element filling 100% of the available width.
 	 * @default false
 	 * @instance
 	 * @memberof LexiconButton
@@ -33,8 +33,8 @@ LexiconButton.STATE = {
 	},
 
 	/**
-	 * URI of the button. Setting `href` will make the component render an anchor
-	 * instead of a button but still look like one
+	 * URI of the button. Setting `href` will make the component render an
+	 * anchor instead of a button but still look like one.
 	 * @default undefined
 	 * @instance
 	 * @memberof LexiconButton
@@ -45,8 +45,8 @@ LexiconButton.STATE = {
 	},
 
 	/**
-	 * Icon symbol to show in the button. Icon rendering is delegated to {@link LexiconIcon}
-	 * @default undefined
+	 * Icon symbol to show in the button. Icon rendering is delegated to {@link
+	 * LexiconIcon}.
 	 * @instance
 	 * @memberof LexiconButton
 	 * @type {string}
@@ -57,8 +57,7 @@ LexiconButton.STATE = {
 	},
 
 	/**
-	 * Label of the button
-	 * @default undefined
+	 * Label of the button.
 	 * @instance
 	 * @memberof LexiconButton
 	 * @type {string}
@@ -81,9 +80,8 @@ LexiconButton.STATE = {
 	},
 
 	/**
-	 * URI of the button. Setting `value` will make the component render an input
-	 * instead of a button but still look like one
-	 * @default undefined
+	 * URI of the button. Setting `value` will make the component render an
+	 * input instead of a button but still look like one.
 	 * @instance
 	 * @memberof LexiconButton
 	 * @type {string}
@@ -93,7 +91,6 @@ LexiconButton.STATE = {
 	}
 };
 
-// Register component
 Soy.register(LexiconButton, templates);
 
 export default LexiconButton;
